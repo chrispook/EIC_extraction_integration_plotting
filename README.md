@@ -28,7 +28,8 @@ Here's a screenshot of the xlsx output. I've autosized the columns.
 ![excel](https://github.com/chrispook/EIC_extraction-integration-plotting_LCMS_data/assets/51006923/6042d14c-98ac-4993-8555-05e1607c5956)
 
 
-Dependencies
+# Python Dependencies
+
 In order to compile this script to a Windows exceutable .exe file you will need to install a recent version of Python and several libraries upon which it depends:
 pyinstaller
 pyopenms
@@ -37,6 +38,7 @@ plotly
 xlsxwriter
 tqdm
 pytz
+
 
 You will also need working versions of the more common 'core' libraries:
 pandas
