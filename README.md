@@ -10,17 +10,26 @@ Values for these three are analysis-specific but suggested starting values are w
 Each Thermo .raw file will first be converted to an /mzML file using the msconvert command line tool from ProteoWizard. You will need this tool installed on your PC in order for this code to run. You can download ProteoWizard here - https://proteowizard.sourceforge.io/download.html
 Alternatively, you can download and install the OpenMS package, which includes the msconvert tool - https://openms.readthedocs.io/en/latest/openms-applications-and-tools/installation.html
 
+The Once EIC data has been extracted and the file creation timestamp scraped from the Windows file metadata, the peaks in each EIC will be identified using a combination of peak_utils.indexes(), scipy.signal.find_peaks_cwt() and scipy.signal.find_peaks() and integrated. The EICs, the peak areas by class, and time series plots of the peak areas and RTs will be visualised using plotly and exported to interactive .html files in a new folder created in the main analysis folder. The peak areas and other metrics for each feature will be tabulated and exported to an xlsx in the new folder using pandas and xlsxwriter. 
+
 Dependencies
 In order to compile this script to a Windows exceutable .exe file you will need to install a recent version of Python and several libraries upon which it depends:
 pyinstaller
-pandas
 pyopenms
 peakutils
 plotly
+xlsxwriter
+tqdm
+pytz
+
 
 As well as several functions of the more common 'core' libraries:
+pandas
 scipy.signal
 numpy.arange
-etc.
+datetime
+glob
+math
+time
 
-I built the version I'm currently using with Python 3.9. PyInstaller is rather particular and I had to install it in its own Python 3.9 environment using Anaconda and then add all the dependencies manually before PyInstaller would produce a bug-free executable.
+I built the version I'm currently using with Python 3.9. PyInstaller is rather particular and I had to install it in its own Python 3.9 environment using Anaconda and then add all the dependencies manually to that environment before PyInstaller would produce a bug-free executable.
