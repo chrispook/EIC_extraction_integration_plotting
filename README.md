@@ -18,8 +18,11 @@ Once EIC data has been extracted and the file creation timestamp scraped from th
 
 The EICs, the peak areas by class, and time series plots of the peak areas and RTs will be visualised using plotly and exported to interactive .html files in a new folder created in the main analysis folder. The peak areas and other metrics for each feature will be tabulated and exported to an xlsx in the new folder using pandas and xlsxwriter. 
 
-Here's a screenshot of the plot output for phenylalanine in a series of primes, SSTs, blanks and QCs from a batch of polar metabolomics analysis. 
+Here's a screenshot of the plot output for phenylalanine in a series of primes, SSTs, blanks and QCs from a batch of polar metabolomics analysis. Hovering over dots in the time series plots reveals contextual information. You can click and drag to zoom in any plot. Clicking on the coloured traces in the legend hides and shows the trace. Double clicking on one hides all but that one. Double click anywhere in any plot to reset or just reload the page. 
 ![freindly](https://github.com/chrispook/EIC_extraction-integration-plotting_LCMS_data/assets/51006923/218a8a63-d5c9-4b98-ba8a-9d9076a77189)
+
+Here's a screenshot of the xlsx output. I've autosized the columns. 
+![excel](https://github.com/chrispook/EIC_extraction-integration-plotting_LCMS_data/assets/51006923/6042d14c-98ac-4993-8555-05e1607c5956)
 
 
 Dependencies
@@ -32,11 +35,10 @@ xlsxwriter
 tqdm
 pytz
 
-
-As well as several functions of the more common 'core' libraries:
+You will also need working versions of the more common 'core' libraries:
 pandas
-scipy.signal
-numpy.arange
+scipy
+numpy
 datetime
 glob
 math
