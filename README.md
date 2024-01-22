@@ -9,7 +9,7 @@ The executable needs to be copied to a folder of Thermo .raw LC-MS datafiles. It
 Values for the _TARGETS.xlsx file are analysis-specific but suggested starting values used for the Q-Exactive are: 
 window:	0.4, ppm:	6, smoothing:	11, , width:	12, distance:	50, prominence:	50000
 
-Each Thermo .raw file will first be converted to an /mzML file using the msconvert command line tool from ProteoWizard. You will need this tool installed on your PC in order for this code to run. You can download ProteoWizard here - https://proteowizard.sourceforge.io/download.html
+Each Thermo .raw file will first be converted to an .mzML file using the msconvert command line tool from ProteoWizard. You will need this tool installed on your PC in order for this code to run. You can download ProteoWizard here - https://proteowizard.sourceforge.io/download.html
 
 Alternatively, you can download and install the OpenMS package, which includes the msconvert tool - https://openms.readthedocs.io/en/latest/openms-applications-and-tools/installation.html
 
