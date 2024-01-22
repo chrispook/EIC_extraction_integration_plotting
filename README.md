@@ -18,6 +18,10 @@ Once EIC data has been extracted and the file creation timestamp scraped from th
 
 The EICs, the peak areas by class, and time series plots of the peak areas and RTs will be visualised using plotly and exported to interactive .html files in a new folder created in the main analysis folder. The peak areas and other metrics for each feature will be tabulated and exported to an xlsx in the new folder using pandas and xlsxwriter. 
 
+Here's a screenshot of the plot output for phenylalanine in a series of primes, SSTs, blanks and QCs from a batch of polar metabolomics analysis. 
+![freindly](https://github.com/chrispook/EIC_extraction-integration-plotting_LCMS_data/assets/51006923/218a8a63-d5c9-4b98-ba8a-9d9076a77189)
+
+
 Dependencies
 In order to compile this script to a Windows exceutable .exe file you will need to install a recent version of Python and several libraries upon which it depends:
 pyinstaller
