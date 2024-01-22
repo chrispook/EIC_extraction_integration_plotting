@@ -1,4 +1,4 @@
-# EIC_extraction-integration-plotting_LCMS_data
+# EIC_extraction-integration-plotting [EEIP]
 This code allows you to extract ion chromatograms from HRMS data, integrate peaks and plot the data by sample type and by timestamp.
 Written by Chris Pook, drchrispook@gmail.com
 This code is released under a GNU3 license - [https://www.gnu.org/licenses/gpl-3.0.en.html#license-text](https://github.com/chrispook/EIC_extraction-integration-plotting_LCMS_data/blob/main/LICENSE)
