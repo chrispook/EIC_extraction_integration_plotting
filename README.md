@@ -5,7 +5,15 @@ This code is released under a GNU3 license - [https://www.gnu.org/licenses/gpl-3
 
 This code is written in Python and designed to be compiled using PyInstaller to create an executable file for use by those with no mass spec experience.
 The executable needs to be copied to a folder of Thermo .raw LC-MS datafiles. It requires an xlsx to be present in the same folder with a specific name. That is the name of the folder with "_TARGETS.xlsx" appended. The xlsx needs to contain columns called name, mz, mins, window, ppm, width, distance and prominence. The script will automatically load this file and use the data in each row to extract an EIC from. The first five values are specific to your analysis, 'window' being the RT delta from the retention time given in 'mins' and 'ppm' being the ppm delta from the given m/z within which EIC data will be extracted. The last three are parameters for the scipy.signal.find_peaks() function - https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.find_peaks.html#scipy.signal.find_peaks
-Values for these three are analysis-specific but suggested starting values are width = 12 (scans), distance = 50 (scans) and prominence = 60,000 (ion counts). 
+Values for the _TARGETS.xlsx file are analysis-specific but suggested starting values used for the Q-Exactive are: 
+window:	0.4
+ppm:	6
+smoothing:	11
+width:	12
+distance:	50
+prominence:	60000
+
+
 
 Each Thermo .raw file will first be converted to an /mzML file using the msconvert command line tool from ProteoWizard. You will need this tool installed on your PC in order for this code to run. You can download ProteoWizard here - https://proteowizard.sourceforge.io/download.html
 Alternatively, you can download and install the OpenMS package, which includes the msconvert tool - https://openms.readthedocs.io/en/latest/openms-applications-and-tools/installation.html
