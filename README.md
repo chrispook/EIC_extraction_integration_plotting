@@ -49,4 +49,4 @@ glob
 math
 time
 
-I built the version I'm currently using with Python 3.9. PyInstaller is rather particular and I had to install it in its own Python 3.9 environment using Anaconda and then add all the dependencies manually to that environment before PyInstaller would produce a bug-free executable. The first time you build an executable you should run it from the command line, otherwise you won't be able to see debugging output. 
+I built the version I'm currently using with Python 3.9. PyInstaller is rather particular and I had to install it in its own Python 3.9 environment using Anaconda and then add all the dependencies manually to that environment before PyInstaller would produce a bug-free executable. The first time you run an executable that you've just built you should run it from the command line, otherwise you won't be able to see debugging output. 
